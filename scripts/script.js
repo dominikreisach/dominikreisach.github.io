@@ -1,3 +1,21 @@
+/*
+This file is licensed under the MIT License
+See LICENSE-MIT for details
+*/
+
+// hide home button
+window.addEventListener("scroll", function () {
+  var button = document.getElementById("homeButton");
+  if (this.window.innerWidth >= 1025) {
+    if (window.scrollY > 50) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  } else {
+    button.style.display = "none";
+  }
+});
 // lazyload
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -8,7 +26,6 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
-
 const lazyImages = document.querySelectorAll(".lazy");
 lazyImages.forEach((lazyImage) => {
   observer.observe(lazyImage);
@@ -29,7 +46,6 @@ function closePopup(event) {
   popups[index].classList.add("hidden");
   document.body.classList.remove("overflow-hidden");
 }
-
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     const openPopups = document.querySelectorAll(".popup:not(.hidden)");

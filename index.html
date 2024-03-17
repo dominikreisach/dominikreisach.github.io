@@ -1,58 +1,855 @@
+<!--
+This file is licensed under the MIT License
+See LICENSE-MIT for details
+-->
+
 <!DOCTYPE html>
 <html class="scroll-smooth scrollbar-hide">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Dominik Reisach: Personal Portfolio Website">
-        <meta name="author" content="Dominik Reisach">
-        <meta name="keywords" content="Architecture, Research, Design, Portfolio, Personal Website">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>dominik reisach</title>
-        <link rel="shortcut icon" type="image/x-icon" href="dr.ico">
-        <!-- css -->
-        <link rel="stylesheet" href="style.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <!-- p5.js -->
-        <script src="scripts/p5.min.js"></script>
-        <script src="scripts/sketch.js"></script>
-    </head>
-    <body class="font-sans text-[#000831] select-none">
-        <header class="flex flex-col items-center justify-center h-screen relative text-center">
-            <!-- nav bar -->
-            <nav class="flex flex-row gap-x-14 m-10">
-                <a class="hover:text-[#ff616b] duration-300 font-extralight">
-                    — work in progress —
-                </a>
-            </nav>
-            <div class="flex-grow"></div>
-            <!-- main -->
-            <h1 class="absolute font-serif">
-                <div class="text-4xl hover:text-[#ff616b] duration-300" href="#">dominik reisach</div>
-                <div class="text-[15.75px]">architecture & computational design</div>
-            </h1>
-        </header>
-        <!-- footer -->
-        <footer class="fixed bottom-0 left-0 w-full mx-auto text-xs lowercase ">
-            <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-y-0 flex-auto items-center justify-evenly pt-24 py-9">
-                
-                <!-- credits -->
-                <div>Made with 
-                    <span class="text-[#ff616b] animate-pulse">&#9829;</span>
-                    <span class="">by Dominik Reisach</span>
-                    <span class="">&#169; 2023</span>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dominik Reisach: Personal Portfolio Website">
+    <meta name="author" content="Dominik Reisach">
+    <meta name="keywords" content="Architecture, Research, Design, Portfolio, Personal Website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dominik reisach</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/imgs/00_favicon/dr.ico">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/p5.min.js"></script>
+    <script src="scripts/sketch.js"></script>
+</head>
+<!-- home button -->
+<div id="homeButton" class="hidden sm:block">
+    <a href="#">
+        <svg class="m-10 fixed bottom-0 right-0 h-[30px] animate-bounce fill-[#000831] hover:fill-[#ff616b] duration-300"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+                d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z" />
+        </svg>
+    </a>
+</div>
+
+<body class="font-sans text-[#000831] select-none">
+    <header class="flex flex-col flex-auto justify-around h-screen">
+        <div></div>
+        <h1 class="font-serif text-center">
+            <div class="text-4xl hover:text-[#ff616b] duration-300" href="#">dominik reisach</div>
+            <div class="text-[15.75px]">architecture & computational design</div>
+        </h1>
+        <nav class="flex flex-col space-y-9 sm:flex-row sm:space-y-0 sm:space-x-9 items-center justify-center">
+            <a href="#selected-work" class="hover:text-[#ff616b] duration-300 font-extralight">selected work</a>
+            <a href="#about" class="hover:text-[#ff616b] duration-300 font-extralight m-12">about</a>
+            <a href="#publications" class="hover:text-[#ff616b] duration-300 font-extralight">publications</a>
+        </nav>
+    </header>
+    <main class="mx-auto px-10 sm:px-10 md:px-10 lg:px-56 xl:px-80 2xl:px-[465px]">
+        <!-- selected work -->
+        <div id="selected-work" class="flex flex-auto items-center justify-center py-12">
+            <h2 class="font-mono lowercase text-2xl">Selected Work</h2>
+        </div>
+        <!-- selected work grid -->
+        <div class="grid gap-6 grid-flow-dense grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lowercase">
+            <div class="cursor-pointer border border-solid border-[#000831] aspect-square overflow-hidden rounded-md">
+                <div class="bg-cover bg-no-repeat bg-center hover:scale-110 duration-500 overflow-hidden lazy"
+                    data-src="imgs/02_offcut_tales/ot0_dr.jpg"
+                    style="background-image: url(imgs/02_offcut_tales/ot0_prev_dr.jpg)">
+                    <div
+                        class="popup-trigger transition-all ease-in-out duration-500 hover:bg-[#000831] opacity-70 aspect-square flex justify-center items-center text-transparent hover:text-[#96bfe6] font-mono text-center text-xs sm:text-base md:text-lg lg:text-lg xl:text-xl">
+                        Offcut Tales</div>
                 </div>
-
-                <!-- links -->
-                <ul class="flex space-x-6 items-center">
-                    <li><a href="https://www.github.com/dominikreisach" target="_blank"><svg class="h-[20px] fill-[#000831] hover:fill-[#ff616b] duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a></li>
-                    <li><a href="https://www.linkedin.com/in/dominik-reisach" target="_blank"><svg class="h-[20px] fill-[#000831] hover:fill-[#ff616b] duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a></li>
-                    <li><a href="https://www.researchgate.net/profile/Dominik-Reisach" target="_blank"><svg class="h-[20px] fill-[#000831] hover:fill-[#ff616b] duration-300" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/></svg></a></li>
-                    <li><a href="https://orcid.org/0000-0002-2101-3463" target="_blank"><svg class="h-[20px] fill-[#000831] hover:fill-[#ff616b] duration-300" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/></svg></a></li>
-                </ul>
             </div>
-        </footer>
+            <div class="cursor-pointer border border-solid border-[#000831] aspect-square overflow-hidden rounded-md">
+                <div class="bg-cover bg-no-repeat bg-center hover:scale-110 duration-500 overflow-hidden lazy"
+                    data-src="imgs/03_huber_reuse/hr0_prev_dr.jpg"
+                    style="background-image: url(imgs/03_huber_reuse/hr0_prev_dr.jpg)">
+                    <div
+                        class="popup-trigger transition-all ease-in-out duration-500 hover:bg-[#000831] opacity-70 aspect-square flex justify-center items-center text-transparent hover:text-[#96bfe6] font-mono text-center text-xs sm:text-base md:text-lg lg:text-lg xl:text-xl">
+                        CircÛbi</div>
+                </div>
+            </div>
+            <div class="cursor-pointer border border-solid border-[#000831] aspect-square overflow-hidden rounded-md">
+                <div class="bg-cover bg-no-repeat bg-center hover:scale-110 duration-500 overflow-hidden lazy"
+                    data-src="imgs/04_reboat/re0_dr.jpg" style="background-image: url(imgs/04_reboat/re0_prev_dr.jpg)">
+                    <div
+                        class="popup-trigger transition-all ease-in-out duration-500 hover:bg-[#000831] opacity-70 aspect-square flex justify-center items-center text-transparent hover:text-[#96bfe6] font-mono text-center text-xs sm:text-base md:text-lg lg:text-lg xl:text-xl">
+                        Re:Boat</div>
+                </div>
+            </div>
+            <div class="cursor-pointer border border-solid border-[#000831] aspect-square overflow-hidden rounded-md">
+                <div class="bg-cover bg-no-repeat bg-center hover:scale-110 duration-500 overflow-hidden lazy"
+                    data-src="imgs/05_sonnenstrasse/st0_dr.jpg"
+                    style="background-image: url(imgs/05_sonnenstrasse/st0_prev_dr.jpg)">
+                    <div
+                        class="popup-trigger transition-all ease-in-out duration-500 hover:bg-[#000831] opacity-70 aspect-square flex justify-center items-center text-transparent hover:text-[#96bfe6] font-mono text-center text-xs sm:text-base md:text-lg lg:text-lg xl:text-xl">
+                        sonnenstrasse</div>
+                </div>
+            </div>
+            <div class="cursor-pointer border border-solid border-[#000831] aspect-square overflow-hidden rounded-md">
+                <div class="bg-cover bg-no-repeat bg-center hover:scale-110 duration-500 overflow-hidden lazy"
+                    data-src="imgs/06_appelstrasse/uh0_dr.jpg"
+                    style="background-image: url(imgs/06_appelstrasse/uh0_prev_dr.jpg)">
+                    <div
+                        class="popup-trigger transition-all ease-in-out duration-500 hover:bg-[#000831] opacity-70 aspect-square flex justify-center items-center text-transparent hover:text-[#96bfe6] font-mono text-center text-xs sm:text-base md:text-lg lg:text-lg xl:text-xl">
+                        appelstrasse</div>
+                </div>
+            </div>
+            <div class="cursor-pointer border border-solid border-[#000831] aspect-square overflow-hidden rounded-md">
+                <div class="bg-cover bg-no-repeat bg-center hover:scale-110 duration-500 overflow-hidden lazy"
+                    data-src="imgs/07_photography/p0_dr.jpg"
+                    style="background-image: url(imgs/07_photography/p0_prev_dr.jpg)">
+                    <div
+                        class="popup-trigger transition-all ease-in-out duration-500 hover:bg-[#000831] opacity-70 aspect-square flex justify-center items-center text-transparent hover:text-[#96bfe6] font-mono text-center text-xs sm:text-base md:text-lg lg:text-lg xl:text-xl">
+                        Photography</div>
+                </div>
+            </div>
+        </div>
+        <!-- upcycle timber -->
+        <div
+            class="popup hidden fixed z-10 inset-0 overflow-y-auto mx-auto py-12 px-7 sm:px-7 md:px-7 lg:px-52 xl:px-60 2xl:px-80">
+            <div class="flex items-center justify-center">
+                <div class="fixed inset-0 transition-opacity bg-[#000831] bg-opacity-50"></div>
+                <div class="relative z-10 p-4 sm:p-6 bg-[#96bfe6] border-2 border-solid border-[#000831] rounded-md w-screen max-h-screen overflow-auto overscroll-contain snap-y snap-mandatory snap-always scrollbar-hide"
+                    style="height: calc(100vh - 6rem);">
+                    <div class="fixed top-4 right-4">
+                        <h2
+                            class="close-button cursor-pointer px-2 py-1 rounded-md bg-[#96bfe6] border border-[#000831] text-[#000831] hover:bg-[#ff616b] hover:text-[#000831] duration-300 text-xs">
+                            X</h2>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot1_dr.jpg"
+                        style="background-image: url(imgs/02_offcut_tales/ot1_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Michael Braun</div>
+                    </div>
+                    <ul
+                        class="text-left sm:text-justify aspect-[16/10] snap-center rounded-md text-xs mb-4 sm:mb-6 font-extralight">
+                        <div class="flex flex-row gap-12 justify-between items-center mb-4">
+                            <h2 class="text-xl font-mono lowercase">Offcut Tales</h2>
+                        </div>
+                        <li class="py-2">Master's Thesis | 2022 | Bauhaus University Weimar, Faculty of Architecture and
+                            Urbanism</li>
+                        <li class="py-1"><span class="font-normal">Supervisors:</span> <span
+                                class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://www.uni-weimar.de/en/architecture-and-urbanism/chairs/infar/"
+                                    target="_blank">Prof. Dr. Sven Schneider</a></span>, <span
+                                class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://www.uni-weimar.de/en/art-and-design/chairs/theory-and-history-of-design/"
+                                    target="_blank">Prof. Dr. Jan Willmann</a></span>, <span
+                                class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://www.strukturstudio.de/" target="_blank">Dr. Stephan Schütz</a></span>
+                        </li>
+                        <li class="py-1"><span class="font-normal">Support:</span> <span
+                                class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://michaelbraun-design.de/" target="_blank">Michael Braun</a></span>
+                            (Photography, Robotic Setup)</span>
+                        </li>
+                        <li class="py-1"><span class="font-normal">Workshop Support:</span> Dr. Christian Hanke, Ringo
+                            Gunkel (Wood Workshop), Christian
+                            Möhwald (Water-Jet Cutting), Matthias Henkelmann (CNC Milling)</span>
+                        </li>
+                        <li class="py-1"><span class="font-normal">Project Description:</span> Currently, the timber
+                            industry in the European Union incinerates up to 80% of its waste wood, releasing its
+                            embodied CO2 into the atmosphere while producing energy. This practice also affects offcuts,
+                            a waste material from structural timber production, mostly because of aesthetic
+                            imperfections. However, there are potential architectural use cases for this material that
+                            extend its lifetime beyond downcycling. Therefore, this project proposes to employ these
+                            offcuts as
+                            load-bearing elements of free-form timber structures and presents an integral
+                            design-to-fabrication workflow suitable for this task. This workflow features
+                            several steps, specifically (1) the computational design process to optimally
+                            place timber offcuts and to compute wood joints, (2) the transfer of design data into a
+                            robotic fabrication process, and (3) the integration of these findings into a unifying
+                            design-to-fabrication workflow and its architectural implications. This process minimizes
+                            material waste and facilitates the design and buildup of offcuts into structural
+                            configurations, including their dis- and reassembly. The resulting timber morphologies
+                            consist of non-standard material aggregated under digital guidance, giving them a distinct
+                            aesthetic expression. A series of digital experiments demonstrated the capabilities of the
+                            conceived method. Finally, the design and robotic fabrication of a fullscale Offcut
+                            Demonstrator proves the feasibility of the proposed workflow under real-world conditions.
+                        </li>
+                        <li class="py-1"><span class="font-normal">Publications</span></li>
+                        <li class="py-1"><span class="font-normal">Reisach, Dominik</span>, Stephan Schütz, Jan
+                            Willmann, and Sven Schneider. 2023. “A Design-to-Fabrication Workflow for Free-Form Timber
+                            Structures Using Offcuts.” In Computer-Aided Architectural Design. INTERCONNECTIONS:
+                            Co-Computing Beyond Boundaries. CAAD Futures 2023, edited by Michela Turrin, Charalampos
+                            Andriotis, and Azarakhsh Rafiee, 1819:361–75. Communications in Computer and Information
+                            Science. Cham: Springer. <span class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://doi.org/10.1007/978-3-031-37189-9_24"
+                                    target="_blank">https://doi.org/10.1007/978-3-031-37189-9_24</a></span>.</li>
+                        <li class="py-1"><span class="font-normal">Reisach, Dominik</span>. 2023. “Offcut Tales:
+                            Documenting the Aesthetics of Timber Waste.” In Proceedings of the 43rd Annual Conference of
+                            the Association for Computer Aided Design in Architecture (ACADIA), edited by Assia
+                            Crawford, Nancy Diniz, Richard Beckett, Jamie Vanucchi, and Marc Swackhamer, Volume I:
+                            Projects:154–59. Denver: Association for Computer Aided Design in Architecture (ACADIA).
+                            <span class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://doi.org/10.3929/ethz-b-000643632"
+                                    target="_blank">https://doi.org/10.3929/ethz-b-000643632</a></span>.
+                        </li>
+                        <li class="py-1"><span class="font-normal">Reisach, Dominik</span>. 2023.
+                            “Spruce Beetle: Release 1.”
+                            Zenodo.
+                            <span class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://doi.org/10.5281/ZENODO.10071468"
+                                    target="_blank">https://doi.org/10.5281/ZENODO.10071468</a></span>.
+                        </li>
+                        <li class="py-1"><span class="font-normal">Presentations</span></li>
+                        <li class="py-1">
+                            <span class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://youtu.be/T4yzbi8qdCY?feature=shared&t=2585" target="_blank">ACADIA
+                                    2023</a></span>
+                        </li>
+                    </ul>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot2_dr.jpg"
+                        style="background-image: url(imgs/02_offcut_tales/ot2_prev_dr.jpg)"></div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot3_dr.jpg"
+                        style="background-image: url(imgs/02_offcut_tales/ot3_prev_dr.jpg)"></div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot4_dr.jpg"
+                        style="background-image: url(imgs/02_offcut_tales/ot4_prev_dr.jpg)"></div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot5_dr.jpg"
+                        style="background-image: url(imgs/02_offcut_tales/ot5_prev_dr.jpg)"></div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot6_dr.gif"
+                        style="background-image: url(imgs/02_offcut_tales/ot6_prev_dr.gif)"></div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot7_dr.gif"
+                        style="background-image: url(imgs/02_offcut_tales/ot7_prev_dr.gif)"></div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot8_dr.gif"
+                        style="background-image: url(imgs/02_offcut_tales/ot8_prev_dr.gif)"></div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot9_dr.jpg"
+                        style="background-image: url(imgs/02_offcut_tales/ot9_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Michael Braun</div>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot10_dr.jpg"
+                        style="background-image: url(imgs/02_offcut_tales/ot10_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Michael Braun</div>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot11_dr.jpg"
+                        style="background-image: url(imgs/02_offcut_tales/ot11_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-black font-mono text-center text-sm">
+                            © Michael Braun</div>
+                    </div>
+                    <div class="snap-center aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/02_offcut_tales/ot12_dr.jpg"
+                        style="background-image: url(imgs/02_offcut_tales/ot12_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Michael Braun</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- huber reuse pavilion -->
+        <div
+            class="popup hidden fixed z-10 inset-0 overflow-y-auto mx-auto py-12 px-7 sm:px-7 md:px-7 lg:px-52 xl:px-60 2xl:px-80">
+            <div class="flex items-center justify-center">
+                <div class="fixed inset-0 transition-opacity bg-[#000831] bg-opacity-50"></div>
+                <div class="relative z-10 p-4 sm:p-6 bg-[#96bfe6] border-2 border-solid border-[#000831] rounded-md w-screen max-h-screen overflow-auto overscroll-contain snap-y snap-mandatory snap-always scrollbar-hide"
+                    style="height: calc(100vh - 6rem);">
+                    <div class="fixed top-4 right-4">
+                        <h2
+                            class="close-button cursor-pointer px-2 py-1 rounded-md bg-[#96bfe6] border border-[#000831] text-[#000831] hover:bg-[#ff616b] hover:text-[#000831] duration-300 text-xs">
+                            X</h2>
+                    </div>
+                    <div class="snap-center snap-proximity mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/03_huber_reuse/hr1_dr.jpg"
+                        style="background-image: url(imgs/03_huber_reuse/hr1_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Yannick Reich</div>
+                    </div>
+                    <ul
+                        class="text-left sm:text-justify aspect-[16/10] snap-center rounded-md text-xs mb-4 sm:mb-6 font-extralight">
+                        <div class="flex flex-row gap-12 justify-between items-center mb-4">
+                            <h2 class="text-xl font-mono lowercase">CircÛbi</h2>
+                        </div>
+                        <li class="py-2">Design–Build Project | 2023 | ETH Zurich, D-ARCH & D-BAUG | <span
+                                class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://www.baudokumentation.ch/projekt/re-use-pavillon-eth-campus-hoenggerberg/948556?s=2&d=c&aw=type;b&pos=1"
+                                    target="_blank">arc award 2023 winner</a></span></li>
+                        <li class="py-1"><span class="font-normal">Supervisors:</span> <span
+                                class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://kaijima.arch.ethz.ch/" target="_blank">Prof. Momoyo
+                                    Kaijima</a></span>, <span class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://cea.ibi.ethz.ch/" target="_blank">Prof. Dr. Catherine De
+                                    Wolf</a></span></li>
+                        <li class="py-1"><span class="font-normal">Teaching Team:</span> Elias Knecht, Inés Ariza,
+                            Martin Bucher, Anna Buser, Brandon Byers, Matthew Gordon, Dr. Meliha Honic, Beril Önalan,
+                            Deepika Raghu, Arabelle de Saussure, Heidi Silvennoinen</li>
+                        <li class="py-1"><span class="font-normal">Student Team:</span> Cashen Adkins, Carole Désirée
+                            Allenbach, Alan Michel von Arx Carrascal, Monica-Mariana Ciobotar, Emma Maria Zeindl Cronin,
+                            Béla Dalcher, Vadym Gerashchenkov, Yu Han, Mu He, Xi Huang, Filip Stanislavov Kalapish,
+                            Robin Karutz, Konrad Michael Kramer, Samuel Marc Labhard, Maxime Lanter, Andreas Lanz,
+                            Zhaoye Li, Loukas Mettas, Despoina Papadopoulou, Giona Luca Peter, Yannick Reich, <span
+                                class="font-normal">Dominik Reisach</span>, Michelle Tanja Schenk, Tim Stettler, Marvin
+                            Huck Dirk Trottmann, Claudia La Valle, Araceli Rodriguez Vallejo, Hanshuo Wu, Lukas Zink
+                        </li>
+                        <li class="py-1"><span class="font-normal">Collaborations:</span>
+                            <span class="hover:text-[#ff616b] duration-300 underline"><a href="https://www.insitu.ch/"
+                                    target="_blank">baubüro in situ ag</a></span>,
+                            <span class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://www.wiederverwerkle.ch/" target="_blank">Wiederverwerkle
+                                    GmbH</a></span>,
+                            <span class="hover:text-[#ff616b] duration-300 underline"><a href="https://www.b-3.ch/"
+                                    target="_blank">B3 Kolb AG</a></span>
+                        </li>
+                        <li class="py-1"><span class="font-normal">Project Description:</span> In summer 2022, three
+                            temporary wooden buildings - the Huber Pavilions - had to make way for a new building on the
+                            ETH Hönggerberg campus. The CircÛbi teaching project took advantage of this opportunity:
+                            under the co-​leadership of two ETH professors, civil engineer Catherine De Wolf and
+                            architect Momoyo Kaijima, students collected the construction elements (or components) of
+                            the dismantled teaching buildings in order to reuse the materials according to the principle
+                            of the circular economy. For an entire semester, around 30 students from the fields of civil
+                            engineering, architecture, mechanical engineering, computer science and materials science
+                            worked together on issues relating to the reuse of building materials. In order to master
+                            the logistical Herculean task, they inventoried the components with lasered QR codes and
+                            thus created a digitalised interface - which enabled them to create a new building from
+                            reused wooden components: the Re-​Use Pavilion on the ETH Hönggerberg campus. The work of
+                            art of the circular economy has now been honoured with the Swiss Architecture Prize Arc
+                            Award in the "Next Generation" category. <span
+                                class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://baug.ethz.ch/en/news-and-events/news/2023/11/an-excellent-pavilion-for-circular-construction.html"
+                                    target="_blank">Text by CEA, ETH Zurich</a></span>.</li>
+                    </ul>
+                    <div class="snap-center snap-proximity mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/03_huber_reuse/hr2_dr.jpg"
+                        style="background-image: url(imgs/03_huber_reuse/hr2_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Elias Knecht</div>
+                    </div>
+                    <div class="snap-center snap-proximity mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/03_huber_reuse/hr3_dr.jpg"
+                        style="background-image: url(imgs/03_huber_reuse/hr3_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Elias Knecht</div>
+                    </div>
+                    <div class="snap-center snap-proximity mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/03_huber_reuse/hr4_dr.jpg"
+                        style="background-image: url(imgs/03_huber_reuse/hr4_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Elias Knecht</div>
+                    </div>
+                    <div class="snap-center snap-proximity mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/03_huber_reuse/hr5_dr.jpg"
+                        style="background-image: url(imgs/03_huber_reuse/hr5_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Yannick Reich</div>
+                    </div>
+                    <div class="snap-center snap-proximity mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/03_huber_reuse/hr6_dr.jpg"
+                        style="background-image: url(imgs/03_huber_reuse/hr6_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Yannick Reich</div>
+                    </div>
+                    <div class="snap-center aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/03_huber_reuse/hr7_dr.jpg"
+                        style="background-image: url(imgs/03_huber_reuse/hr7_prev_dr.jpg)"></div>
+                </div>
+            </div>
+        </div>
+        <!-- re:boat -->
+        <div
+            class="popup hidden fixed z-10 inset-0 overflow-y-auto mx-auto py-12 px-7 sm:px-7 md:px-7 lg:px-52 xl:px-60 2xl:px-80">
+            <div class="flex items-center justify-center">
+                <div class="fixed inset-0 transition-opacity bg-[#000831] bg-opacity-50"></div>
+                <div class="relative z-10 p-4 sm:p-6 bg-[#96bfe6] border-2 border-solid border-[#000831] rounded-md w-screen max-h-screen overflow-auto overscroll-contain snap-y snap-mandatory snap-always scrollbar-hide"
+                    style="height: calc(100vh - 6rem);">
+                    <div class="fixed top-4 right-4">
+                        <h2
+                            class="close-button cursor-pointer px-2 py-1 rounded-md bg-[#96bfe6] border border-[#000831] text-[#000831] hover:bg-[#ff616b] hover:text-[#000831] duration-300 text-xs">
+                            X</h2>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/04_reboat/re1_dr.jpg"
+                        style="background-image: url(imgs/04_reboat/re1_prev_dr.jpg)">
+                    </div>
+                    <ul
+                        class="text-left sm:text-justify aspect-[16/10] snap-center rounded-md text-xs mb-4 sm:mb-6 font-extralight">
+                        <div class="flex flex-row gap-12 justify-between items-center mb-4">
+                            <h2 class="text-xl font-mono lowercase">Re:Boat</h2>
+                        </div>
+                        <li class="py-2"><span class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://architecturecompetitions.com/microhome2021" target="_blank">Buildner
+                                    Microhome Competition #3</a></span> | 2021</li>
+                        <li class="py-1"><span class="font-normal">Project Team:</span> Dominik Reisach, Lia Zinngrebe
+                        </li>
+                        <li class="py-1"><span class="font-normal">Project Description:</span> Living by the water – the
+                            reason why so many people are drawn to coastal towns. But why not live on the water and
+                            tackle the issues of housing shortages and urban sprawl? This design proposal suggests a
+                            floating tiny home that is reachable by boat. Yet, this proposal also addresses a second
+                            issue: Sailing boat graveyards. The floating houseboat makes use of everything there is to
+                            find. Fiberglass masts become the frame structure of the houseboat, joined with sailing
+                            ropes. Shredded glass fibers from hulls are packed into sails to become insulation or are
+                            processed into cladding for the interior walls. The boat windows become windows for the
+                            houseboat, while the wooden deck becomes cladding for the floor and façade. Equipped with
+                            these materials, the houseboat presents itself in a simplistic and timeless design. Its
+                            unfoldable furniture in the living space is hidden in the floor and the wall, whereas the
+                            sleeping area is on top of the bathroom to save space. To ensure independence from the grid,
+                            the houseboat is equipped with solar panels to generate electricity, a hydroponic system to
+                            grow vegetables, and a modern water management circulation system.</li>
+                    </ul>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/04_reboat/re2_dr.jpg"
+                        style="background-image: url(imgs/04_reboat/re2_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/04_reboat/re3_dr.jpg"
+                        style="background-image: url(imgs/04_reboat/re3_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/04_reboat/re4_dr.jpg"
+                        style="background-image: url(imgs/04_reboat/re4_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/04_reboat/re5_dr.jpg"
+                        style="background-image: url(imgs/04_reboat/re5_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/04_reboat/re6_dr.jpg"
+                        style="background-image: url(imgs/04_reboat/re6_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/04_reboat/re7_dr.jpg"
+                        style="background-image: url(imgs/04_reboat/re7_prev_dr.jpg)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sonnenstrasse -->
+        <div
+            class="popup hidden fixed z-10 inset-0 overflow-y-auto mx-auto py-12 px-7 sm:px-7 md:px-7 lg:px-52 xl:px-60 2xl:px-80">
+            <div class="flex items-center justify-center">
+                <div class="fixed inset-0 transition-opacity bg-[#000831] bg-opacity-50"></div>
+                <div class="relative z-10 p-4 sm:p-6 bg-[#96bfe6] border-2 border-solid border-[#000831] rounded-md w-screen max-h-screen overflow-auto overscroll-contain snap-y snap-mandatory snap-always scrollbar-hide"
+                    style="height: calc(100vh - 6rem);">
+                    <div class="fixed top-4 right-4">
+                        <h2
+                            class="close-button cursor-pointer px-2 py-1 rounded-md bg-[#96bfe6] border border-[#000831] text-[#000831] hover:bg-[#ff616b] hover:text-[#000831] duration-300 text-xs">
+                            X</h2>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/05_sonnenstrasse/st1_dr.jpg"
+                        style="background-image: url(imgs/05_sonnenstrasse/st1_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <ul
+                        class="text-left sm:text-justify aspect-[16/10] snap-center rounded-md text-xs mb-4 sm:mb-6 font-extralight">
+                        <div class="flex flex-row gap-12 justify-between items-center mb-4">
+                            <h2 class="text-xl font-mono lowercase"><span
+                                    class="hover:text-[#ff616b] duration-300 underline"><a
+                                        href="https://www.allmannwappner.com/en/projekte/2999/n-a"
+                                        target="_blank">Sonnenstrasse, Munich,
+                                        DE</a></span>
+                            </h2>
+                        </div>
+                        <li class="py-2">Competition | 1st Prize | 2019 | <span
+                                class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://www.allmannwappner.com/en/" target="_blank">Allmann Wappner
+                                    Architekten</a></span></li>
+                        <li class="py-1"><span class="font-normal">Project Team:</span> Alexandra Wagner (Design
+                            Direction), Philipp Vogeley (Lead), Simon Kochhan, <span class="font-normal">Dominik
+                                Reisach</span>, Timm Traxler, Nicolas Wolf
+                        </li>
+                        <li class="py-1"><span class="font-normal">Visualization:</span> Forbes Massie Studio</li>
+                        <li class="py-1"><span class="font-normal">Project Description:</span> The defining
+                            architectural features of this design are transparency, structural clarity, a place of
+                            prominence within the urban context and a symbiotic relationship between the office units
+                            and the exterior space. This roughly 2,400-square-meter site is located in downtown Munich
+                            in a traditional neighborhood characterized by the typical modernist architecture of the
+                            post-war period. With its unique C-shape, the building encircles a large interior courtyard
+                            and takes maximum advantage of the natural light all year round. We developed our climatic
+                            concept by tracking the movement of the sun and analyzing the precise amount of light that
+                            penetrates the façade. The use of solar shading and glare protection elements as well as
+                            cooling systems ensure that the interior spaces are shaded and cool during the summer
+                            months.<br>
 
-        <!-- js scripts -->
-        <script src="scripts/autotyping.js"></script>
-        <script src="scripts/script.js"></script>
-    </body>
+                            The façade is defined by a series of alternating round and square columns; the former
+                            reminiscent of ancient colonnades and the latter made of solid concrete. An outer shell
+                            lined with folding glass doors is used for ventilation, transforming the main façade into a
+                            perpetually evolving image as these “wings” open and close to varying degrees. The materials
+                            we used further accentuate this multi-layered effect: brass-colored metal slats contrast
+                            with the light grey concrete of the outer shell.<br>
+
+                            The new building has an open and inviting appearance. The ground floor offers space for
+                            retail and hospitality units in a variety of flexible floorplans. In keeping with the
+                            attractive location, the upper floors offer bright, generous office spaces, which can be
+                            adapted for various uses and accommodate traditional as well as innovative workplace
+                            designs. Our multifunctional floorplans work with a wide range of office models, from
+                            “hot-desk” spaces to fixed workstations as well as business club, cellular and open plan
+                            offices — or any combination thereof. <span
+                                class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://www.allmannwappner.com/en/projekte/2999/n-a" target="_blank">Text by
+                                    Allmann Wappner Architekten</a></span>.</li>
+                    </ul>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/05_sonnenstrasse/st2_dr.jpg"
+                        style="background-image: url(imgs/05_sonnenstrasse/st2_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-gray-500 font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/05_sonnenstrasse/st3_dr.jpg"
+                        style="background-image: url(imgs/05_sonnenstrasse/st3_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-gray-500 font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/05_sonnenstrasse/st4_dr.jpg"
+                        style="background-image: url(imgs/05_sonnenstrasse/st4_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-gray-500 font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/05_sonnenstrasse/st5_dr.jpg"
+                        style="background-image: url(imgs/05_sonnenstrasse/st5_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-gray-500 font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/05_sonnenstrasse/st6_dr.jpg"
+                        style="background-image: url(imgs/05_sonnenstrasse/st6_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <div class="snap-center aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/05_sonnenstrasse/st7_dr.jpg"
+                        style="background-image: url(imgs/05_sonnenstrasse/st7_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- appelstrasse -->
+        <div
+            class="popup hidden fixed z-10 inset-0 overflow-y-auto mx-auto py-12 px-7 sm:px-7 md:px-7 lg:px-52 xl:px-60 2xl:px-80">
+            <div class="flex items-center justify-center">
+                <div class="fixed inset-0 transition-opacity bg-[#000831] bg-opacity-50"></div>
+                <div class="relative z-10 p-4 sm:p-6 bg-[#96bfe6] border-2 border-solid border-[#000831] rounded-md w-screen max-h-screen overflow-auto overscroll-contain snap-y snap-mandatory snap-always scrollbar-hide"
+                    style="height: calc(100vh - 6rem);">
+                    <div class="fixed top-4 right-4">
+                        <h2
+                            class="close-button cursor-pointer px-2 py-1 rounded-md bg-[#96bfe6] border border-[#000831] text-[#000831] hover:bg-[#ff616b] hover:text-[#000831] duration-300 text-xs">
+                            X</h2>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/06_appelstrasse/uh1_dr.jpg"
+                        style="background-image: url(imgs/06_appelstrasse/uh1_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <ul
+                        class="text-left sm:text-justify aspect-[16/10] snap-center rounded-md text-xs mb-4 sm:mb-6 font-extralight">
+                        <div class="flex flex-row gap-12 justify-between items-center mb-4">
+                            <h2 class="text-xl font-mono lowercase">Façade Refurbishment Appelstrasse, Hanover, DE
+                            </h2>
+                        </div>
+                        <li class="py-2">Competition | 2019 | <span
+                                class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://www.allmannwappner.com/en/" target="_blank">Allmann Wappner
+                                    Architekten</a></span></li>
+                        <li class="py-1"><span class="font-normal">Project Team:</span> Philipp Vogeley (Lead),
+                            Maximilian
+                            Jüngling (Project Lead), <span class="font-normal">Dominik Reisach</span>, Štěpánka
+                            Úlehlová, Simon Köppl
+                        </li>
+                        <li class="py-1"><span class="font-normal">Visualization:</span> <span
+                                class="hover:text-[#ff616b] duration-300 underline"><a
+                                    href="https://grauwald-studio.com/" target="_blank">Grauwald Studio</a></span></li>
+                        <!-- <li class="py-1"><span class="font-normal">Project Description:</span> </li> -->
+                    </ul>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/06_appelstrasse/uh2_dr.jpg"
+                        style="background-image: url(imgs/06_appelstrasse/uh2_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/06_appelstrasse/uh3_dr.jpg"
+                        style="background-image: url(imgs/06_appelstrasse/uh3_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-gray-500 font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/06_appelstrasse/uh4_dr.jpg"
+                        style="background-image: url(imgs/06_appelstrasse/uh4_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-gray-500 font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/06_appelstrasse/uh5_dr.jpg"
+                        style="background-image: url(imgs/06_appelstrasse/uh5_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-gray-500 font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/06_appelstrasse/uh6_dr.jpg"
+                        style="background-image: url(imgs/06_appelstrasse/uh6_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                    <div class="snap-center aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/06_appelstrasse/uh7_dr.jpg"
+                        style="background-image: url(imgs/06_appelstrasse/uh7_prev_dr.jpg)">
+                        <div
+                            class="transition-all ease-in-out duration-500 aspect-[16/10] p-2 flex justify-center items-end text-transparent hover:text-white font-mono text-center text-sm">
+                            © Allmann Wappner Architekten</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- photography -->
+        <div
+            class="popup hidden fixed z-10 inset-0 overflow-y-auto mx-auto py-12 px-7 sm:px-7 md:px-7 lg:px-52 xl:px-60 2xl:px-80">
+            <div class="flex items-center justify-center">
+                <div class="fixed inset-0 transition-opacity bg-[#000831] bg-opacity-50"></div>
+                <div class="relative z-10 p-4 sm:p-6 bg-[#96bfe6] border-2 border-solid border-[#000831] rounded-md w-screen max-h-screen overflow-auto overscroll-contain snap-y snap-mandatory snap-always scrollbar-hide"
+                    style="height: calc(100vh - 6rem);">
+                    <div class="fixed top-4 right-4">
+                        <h2
+                            class="close-button cursor-pointer px-2 py-1 rounded-md bg-[#96bfe6] border border-[#000831] text-[#000831] hover:bg-[#ff616b] hover:text-[#000831] duration-300 text-xs">
+                            X</h2>
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p1_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p1_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p2_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p2_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p3_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p3_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p4_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p4_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p5_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p5_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p6_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p6_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p7_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p7_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p8_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p8_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p9_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p9_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p10_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p10_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p11_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p11_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p12_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p12_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p13_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p13_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p14_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p14_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p15_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p15_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p16_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p16_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p17_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p17_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p18_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p18_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p19_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p19_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center mb-4 sm:mb-6 aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p20_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p20_prev_dr.jpg)">
+                    </div>
+                    <div class="snap-center aspect-square md:aspect-[16/10] border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                        data-src="imgs/07_photography/p21_dr.jpg"
+                        style="background-image: url(imgs/07_photography/p21_prev_dr.jpg)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- selected work -->
+        <div id="publications" class="flex flex-auto items-center justify-center mt-24 py-12">
+            <h2 class="font-mono lowercase text-2xl">Publications</h2>
+        </div>
+        <div class="grid gap-6 grid-flow-dense grid-cols-1 sm:grid-cols-1 text-[#96bfe6] text-xs text-justify">
+            <!-- <div class="bg-[#000831] border-[#000831] bg-opacity-100 rounded-md p-6"><span
+                    class="text-[#ff616b]">Reisach, Dominik</span>, Stephan Schütz, Jan Willmann, and Sven Schneider.
+                2023. “Digital Fabrication for Circular Timber Construction: A Case Study.” <span class="italic">Journal
+                    of Circular Economy</span>, Beyond the Hype: Practical Implementations of Digital Technologies for a
+                Circular Built Environment <span class="hover:text-[#ff616b] duration-300 underline"><a
+                        href="https://doi.org/10.1007/978-3-031-37189-9_24"
+                        target="_blank">https://doi.org/10.1007/978-3-031-37189-9_24</a></span>.</div> -->
+            <div class="bg-[#000831] border-[#000831] bg-opacity-100 rounded-md p-6"><span
+                    class="text-[#ff616b]">Reisach, Dominik</span>. 2023. “Offcut Tales: Documenting the Aesthetics of
+                Timber Waste.” In Proceedings of the 43rd Annual Conference of the Association for Computer Aided Design
+                in Architecture (ACADIA), edited by Assia Crawford, Nancy Diniz, Richard Beckett, Jamie Vanucchi, and
+                Marc Swackhamer, Volume I: Projects:154–59. Denver: Association for Computer Aided Design in
+                Architecture (ACADIA). <span class="hover:text-[#ff616b] duration-300 underline"><a
+                        href="https://doi.org/10.3929/ethz-b-000643632"
+                        target="_blank">https://doi.org/10.3929/ethz-b-000643632</a></span>.</div>
+            <div class="bg-[#000831] border-[#000831] bg-opacity-100 rounded-md p-6"><span
+                    class="text-[#ff616b]">Reisach, Dominik</span>, Stephan Schütz, Jan Willmann, and Sven Schneider.
+                2023. “A Design-to-Fabrication Workflow for Free-Form Timber Structures Using Offcuts.” In
+                Computer-Aided Architectural Design. INTERCONNECTIONS: Co-Computing Beyond Boundaries. CAAD Futures
+                2023, edited by Michela Turrin, Charalampos Andriotis, and Azarakhsh Rafiee, 1819:361–75. Communications
+                in Computer and Information Science. Cham: Springer. <span
+                    class="hover:text-[#ff616b] duration-300 underline"><a
+                        href="https://doi.org/10.1007/978-3-031-37189-9_24"
+                        target="_blank">https://doi.org/10.1007/978-3-031-37189-9_24</a></span>.</div>
+            <div class="bg-[#000831] border-[#000831] bg-opacity-100 rounded-md p-6"><span
+                    class="text-[#ff616b]">Reisach, Dominik</span>. 2023. “Spruce Beetle: Release 1.” Zenodo. <span
+                    class="hover:text-[#ff616b] duration-300 underline"><a
+                        href="https://doi.org/10.5281/ZENODO.10071468"
+                        target="_blank">https://doi.org/10.5281/ZENODO.10071468</a></span>.</div>
+            <div class="bg-[#000831] border-[#000831] bg-opacity-100 rounded-md p-6"><span
+                    class="text-[#ff616b]">Reisach, Dominik</span>. 2022. “Upcycle Timber: A Design-to-Fabrication
+                Workflow for Free-Form Timber Structures with Offcuts.” Master’s thesis, Weimar: Bauhaus University
+                Weimar.</div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="mx-auto px-10 sm:px-10 md:px-10 lg:px-56 xl:px-80 2xl:px-[465px]">
+        <div id="about" class="flex flex-auto items-center justify-center mt-24 py-12">
+            <h2 class="font-mono lowercase text-2xl">About</h2>
+        </div>
+        <!-- cv text -->
+        <div class="flex flex-col justify-center">
+            <div class="grid gap-6 grid-flow-dense grid-cols-1 sm:grid-cols-2">
+                <div class="snap-center snap-proximity mb-4 sm:mb-6 aspect-square border border-solid border-[#000831] overflow-hidden rounded-md bg-cover bg-no-repeat bg-center lazy"
+                    data-src="imgs/01_else/01_dr.jpg" style="background-image: url(imgs/01_else/01_prev_dr.jpg)"></div>
+                <div
+                    class="bg-[#000831] border-[#000831] bg-opacity-100 text-[#96bfe6] aspect-square rounded-md p-6 text-xs text-justify">
+                    Dominik is an architect and computational designer with a special interest in digital fabrication,
+                    traditional craft, and material culture. He studied architecture in <span
+                        class="hover:text-[#ff616b] duration-300 underline"><a href="https://ar.hm.edu/en/index.en.html"
+                            target="_blank">Munich</a></span> and <span
+                        class="hover:text-[#ff616b] duration-300 underline"><a
+                            href="https://www.uni-weimar.de/en/architecture-and-urbanism/"
+                            target="_blank">Weimar</a></span> and served as a <span
+                        class="hover:text-[#ff616b] duration-300 underline"><a
+                            href="https://www.uni-weimar.de/en/architecture-and-urbanism/chairs/infar/"
+                            target="_blank">teaching assistant</a></span> in both places. He has also worked for
+                    architecture offices in <span class="hover:text-[#ff616b] duration-300 underline"><a
+                            href="https://www.allmannwappner.com/en/" target="_blank">Germany</a></span> and <span
+                        class="hover:text-[#ff616b] duration-300 underline"><a href="https://lendager.com/"
+                            target="_blank">Denmark</a></span>. Currently, Dominik is pursuing a PhD at the <span
+                        class="hover:text-[#ff616b] duration-300 underline"><a href="https://ita.arch.ethz.ch/"
+                            target="_blank">Institute of Technology in Architecture</a></span>, <span
+                        class="hover:text-[#ff616b] duration-300 underline"><a href="https://arch.ethz.ch/en"
+                            target="_blank">ETH Zurich</a></span>, under the co-supervision of <span
+                        class="hover:text-[#ff616b] duration-300 underline"><a
+                            href="https://www.langenberg.arch.ethz.ch/?lang=en" target="_blank">Prof. Dr. Silke
+                            Langenberg</a></span> and <span class="hover:text-[#ff616b] duration-300 underline"><a
+                            href="https://dbt.arch.ethz.ch/" target="_blank">Prof. Dr. Benjamin Dillenburger</a></span>.
+                    Moreover, he is part of the <span class="hover:text-[#ff616b] duration-300 underline"><a
+                            href="https://dfab.ch/" target="_blank">NCCR Digital Fabrication</a></span> and an
+                    associated PhD Researcher at the <span class="hover:text-[#ff616b] duration-300 underline"><a
+                            href="https://ai.ethz.ch/" target="_blank">ETH AI Center</a></span>.</div>
+            </div>
+        </div>
+        <div
+            class="flex flex-col gap-y-4 lg:flex-row lg:gap-y-0 flex-auto items-center justify-evenly pt-24 py-9 lowercase text-xs">
+            <!-- credits -->
+            <div>Made with
+                <span class="text-[#ff616b] animate-pulse">&#9829;</span>
+                <span class="">by Dominik Reisach</span>
+                <span class="">&#169; 2024</span>
+            </div>
+            <!-- links -->
+            <ul class="flex space-x-6">
+                <li><a href="https://www.github.com/dominikreisach" target="_blank"><svg
+                            class="h-[20px] fill-[#000831] hover:fill-[#ff616b] duration-300"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                            <path
+                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                        </svg></a></li>
+                <li><a href="https://www.linkedin.com/in/dominik-reisach" target="_blank"><svg
+                            class="h-[20px] fill-[#000831] hover:fill-[#ff616b] duration-300"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                        </svg></a></li>
+                <li><a href="https://www.researchgate.net/profile/Dominik-Reisach" target="_blank"><svg
+                            class="h-[20px] fill-[#000831] hover:fill-[#ff616b] duration-300"
+                            xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                            <path
+                                d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z" />
+                        </svg></a></li>
+                <li><a href="https://orcid.org/0000-0002-2101-3463" target="_blank"><svg
+                            class="h-[20px] fill-[#000831] hover:fill-[#ff616b] duration-300"
+                            xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            <path
+                                d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z" />
+                        </svg></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- js scripts -->
+    <script src="scripts/script.js"></script>
+</body>
+
 </html>
