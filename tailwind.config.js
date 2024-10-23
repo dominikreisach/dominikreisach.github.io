@@ -1,18 +1,18 @@
-/*
-This file is licensed under the MIT License
-See LICENSE-MIT for details
-*/
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    darkMode:"class",
-    content: ["./*.html"],
-    theme: {
-      extend: {
-        screens:{
-          "sm":"480px"
-        },
-      },
+  content: [
+    './src/**/*.{html,js,woff2}',
+    './index.html',
+    './node_modules/flowbite/**/*.js',
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        'titillium': ["'Titillium Web'", 'sans-serif'],
+      }
     },
-    plugins: [],
-  }
+  },
+  plugins: [
+    require('flowbite/plugin')
+  ],
+}

@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/styles.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./src/css/styles.css --minify",
+    "prettier": "prettier --write **/*.html"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "flowbite": "^2.3.0"
+  }
+}
