@@ -18,6 +18,7 @@ var b_2;
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+  background("#000000");
 }
 
 function setup() {
