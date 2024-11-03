@@ -11,6 +11,10 @@ module.exports = {
         'titillium': ["'Titillium Web'", 'sans-serif'],
       }
     },
+    screens: {
+      md: '600px',
+      lg: '900px',
+    },
   },
   plugins: [
     require('flowbite/plugin')

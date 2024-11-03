@@ -57,9 +57,12 @@ function setup() {
 function draw() {    
     noStroke();
 
-    if (windowWidth < 760) {
+    if (windowWidth < 600) {
         circleDiameter = windowWidth / 2;
         thickness = 1.5;
+      } else if (windowWidth < 900) {
+        circleDiameter = windowWidth / 3;
+        thickness = 2.0;
       } else {
         circleDiameter = windowWidth / 4;
         thickness = 2.5;

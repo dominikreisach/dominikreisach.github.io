@@ -28,53 +28,53 @@ See LICENSE-MIT for details
   </head>
 
   <body class="text-white">
-    <header class="text-4xl md:text-6xl">
+    <header class="text-4xl md:text-5xl lg:text-6xl">
       <nav
-        class="grid h-screen p-9 md:p-12 grid-rows-1 gap-y-6 md:gap-y-0 md:grid-rows-1 grid-cols-1 md:grid-cols-2"
+        class="grid h-screen p-9 lg:p-12 grid-rows-1 gap-y-6 lg:gap-y-0 lg:grid-rows-1 grid-cols-1 lg:grid-cols-2"
       >
-        <div class="justify-self-center md:justify-self-start order-1">
+        <div class="justify-self-center lg:justify-self-start order-1">
           <a
             class="hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300"
             >dominik reisach</a
           >
         </div>
-        <div class="justify-self-center md:justify-self-end order-2">
+        <div class="justify-self-center lg:justify-self-end order-2">
           <a
-            class="popup-trigger hover:bg-gradient-to-r from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-2xl md:text-6xl"
+            class="popup-trigger hover:bg-gradient-to-r from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-2xl md:text-4xl lg:text-6xl"
             >about</a
           >
         </div>
         <div
-          class="justify-self-center md:justify-self-start order-last md:order-3"
+          class="justify-self-center lg:justify-self-start order-last lg:order-3"
         >
           <a
-            class="hover:bg-gradient-to-r from-[#992d9b] to-[#187caa] hover:bg-clip-text hover:text-transparent duration-300 text-2xl md:text-6xl"
+            class="hover:bg-gradient-to-r from-[#992d9b] to-[#187caa] hover:bg-clip-text hover:text-transparent duration-300 text-2xl md:text-4xl lg:text-6xl"
             href="#selected-work"
             >selected work</a
           >
         </div>
-        <div class="justify-self-center md:justify-self-end order-3 md:order-4">
+        <div class="justify-self-center lg:justify-self-end order-3 lg:order-4">
           <a
-            class="popup-trigger hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300 text-2xl md:text-6xl text-right"
+            class="popup-trigger hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300 text-2xl md:text-4xl lg:text-6xl text-right"
             >publications</a
           >
         </div>
       </nav>
     </header>
-    <main class="mx-auto px-10 md:px-60">
+    <main class="mx-auto px-10 lg:px-60">
       <!-- about -->
       <div class="popup hidden fixed z-10 inset-0">
         <div
           class="relative h-screen w-screen z-10 overflow-auto overscroll-contain scrollbar-hide bg-black"
         >
-          <div class="fixed top-10 md:top-12 right-12">
+          <div class="fixed top-10 lg:top-12 right-12">
             <h2
-              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               &empty;
             </h2>
           </div>
-          <div class="flex flex-col md:flex-row gap-12 p-12 place-items-center">
+          <div class="flex flex-col lg:flex-row gap-12 p-12 place-items-center">
             <picture class="basis-1/2">
               <source srcset="src/imgs/01_else/dr.avif" type="image/avif" />
               <img
@@ -83,7 +83,7 @@ See LICENSE-MIT for details
                 class="rounded-md"
               />
             </picture>
-            <div class="text-pretty md:text-justify basis-1/2">
+            <div class="text-pretty lg:text-justify basis-1/2">
               Dominik is an architect and computational designer with a special
               interest in digital fabrication, traditional craft, and material
               culture. He studied architecture in
@@ -186,15 +186,15 @@ See LICENSE-MIT for details
         >
           <div class="fixed top-12 right-12">
             <h2
-              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               &empty;
             </h2>
           </div>
           <div
-            class="grid grid-cols-1 gap-12 pt-36 pb-12 px-12 md:px-36 text-pretty text-sm md:text-base"
+            class="grid grid-cols-1 gap-12 pt-36 pb-12 px-12 lg:px-36 text-pretty text-sm lg:text-base"
           >
-            <div class="flex flex-col md:flex-row outline outline-1 group">
+            <div class="flex flex-col lg:flex-row outline outline-1 group">
               <div class="basis-2/5 flex-initial">
                 <img
                   src="/src/imgs/00_publications/2024_03.jpg"
@@ -203,15 +203,15 @@ See LICENSE-MIT for details
                 />
               </div>
               <div class="flex flex-col gap-3 m-6 justify-center basis-3/5">
-                <div class="text-lg md:text-xl">
+                <div class="text-lg lg:text-xl">
                   A Systematic Literature Review on Computational Design Methods
                   for Non-Uniform Found Objects
                 </div>
                 <div class="">
-                  Qiming Sun*,
+                  Qiming Sun<sup>&#9675;</sup>,
                   <span
                     class="group-hover:bg-gradient-to-r from-[#187caa] via-[#f92f8b] to-[#fcbe37] group-hover:bg-clip-text group-hover:text-transparent duration-300"
-                    >Dominik Reisach*</span
+                    >Dominik Reisach<sup>&#9675;</sup></span
                   >, Silke Langenberg, Benjamin Dillenburger
                 </div>
                 <div class="">SSRN, 2024</div>
@@ -237,7 +237,7 @@ See LICENSE-MIT for details
                 </div>
               </div>
             </div>
-            <div class="flex flex-col md:flex-row outline outline-1 group">
+            <div class="flex flex-col lg:flex-row outline outline-1 group">
               <div class="basis-2/5 flex-initial">
                 <img
                   src="/src/imgs/00_publications/2024_02.jpg"
@@ -246,16 +246,17 @@ See LICENSE-MIT for details
                 />
               </div>
               <div class="flex flex-col gap-3 m-6 justify-center basis-3/5">
-                <div class="text-lg md:text-xl">
+                <div class="text-lg lg:text-xl">
                   Web-Based Material Database for Circular Design
                 </div>
                 <div class="">
-                  Man Ki Ian Law, Chia Chang Keng, Beril Önalan,
+                  Man Ki Ian Law, Chia Chang Keng, Beril
+                  Önalan<sup>&#9651;</sup>,
                   <span
                     class="group-hover:bg-gradient-to-r from-[#187caa] via-[#f92f8b] to-[#fcbe37] group-hover:bg-clip-text group-hover:text-transparent duration-300"
-                    >Dominik Reisach</span
-                  >, Simon Griffioen, Arabelle de Saussure, Benjamin
-                  Dillenburger, Catherine de Wolf
+                    >Dominik Reisach<sup>&#9651;</sup></span
+                  >, Simon Griffioen<sup>&#9651;</sup>, Arabelle de Saussure,
+                  Benjamin Dillenburger, Catherine de Wolf
                 </div>
                 <div class="">Design Modelling Symposium, 2024</div>
                 <div class="">
@@ -274,7 +275,7 @@ See LICENSE-MIT for details
                 </div>
               </div>
             </div>
-            <div class="flex flex-col md:flex-row outline outline-1 group">
+            <div class="flex flex-col lg:flex-row outline outline-1 group">
               <div class="basis-2/5 flex-initial">
                 <img
                   src="/src/imgs/00_publications/2024_01.jpg"
@@ -283,7 +284,7 @@ See LICENSE-MIT for details
                 />
               </div>
               <div class="flex flex-col gap-3 m-6 justify-center basis-3/5">
-                <div class="text-lg md:text-xl">
+                <div class="text-lg lg:text-xl">
                   Digital Fabrication for Circular Timber Construction: A Case
                   Study
                 </div>
@@ -310,7 +311,7 @@ See LICENSE-MIT for details
                 </div>
               </div>
             </div>
-            <div class="flex flex-col md:flex-row outline outline-1 group">
+            <div class="flex flex-col lg:flex-row outline outline-1 group">
               <div class="basis-2/5 flex-initial">
                 <img
                   src="/src/imgs/00_publications/2023_02.jpg"
@@ -319,7 +320,7 @@ See LICENSE-MIT for details
                 />
               </div>
               <div class="flex flex-col gap-3 m-6 justify-center basis-3/5">
-                <div class="text-lg md:text-xl">
+                <div class="text-lg lg:text-xl">
                   Offcut Tales: Documenting the Aesthetics of Timber Waste
                 </div>
                 <div class="">
@@ -345,7 +346,7 @@ See LICENSE-MIT for details
                 </div>
               </div>
             </div>
-            <div class="flex flex-col md:flex-row outline outline-1 group">
+            <div class="flex flex-col lg:flex-row outline outline-1 group">
               <div class="basis-2/5 flex-initial">
                 <img
                   src="/src/imgs/00_publications/2023_01.jpg"
@@ -354,7 +355,7 @@ See LICENSE-MIT for details
                 />
               </div>
               <div class="flex flex-col gap-3 m-6 justify-center basis-3/5">
-                <div class="text-lg md:text-xl">
+                <div class="text-lg lg:text-xl">
                   A Design-to-Fabrication Workflow for Free-Form Timber
                   Structures Using Offcuts
                 </div>
@@ -387,15 +388,72 @@ See LICENSE-MIT for details
                 </div>
               </div>
             </div>
+            <!-- <div class="flex flex-col lg:flex-row outline outline-1 group">
+            <div class="basis-2/5 flex-initial">
+              <img src="/src/imgs/00_publications/2023_01.jpg" alt="Offcut Tales" class="object-cover" />
+            </div>
+            <div class="flex flex-col gap-3 m-6 justify-center basis-3/5">
+              <div class="text-lg lg:text-xl">
+                [2] Upcycle Timber: A Design-to-Fabrication Workflow for Free-Form Timber
+                Structures with Offcuts
+              </div>
+              <div class="">
+                <span
+                  class="group-hover:bg-gradient-to-r from-[#187caa] via-[#f92f8b] to-[#fcbe37] group-hover:bg-clip-text group-hover:text-transparent duration-300">Dominik
+                  Reisach</span>
+              </div>
+              <div class="">Bauhaus-Universität Weimar, 2022</div>
+              <div class="">
+                <a class="underline hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300"
+                  target="_blank" href="#">[Master Thesis]</a>
+                <a class="underline hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300"
+                  target="_blank" href="#">[BibTeX]</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row outline outline-1 group">
+            <div class="basis-2/5 flex-initial">
+              <img src="/src/imgs/00_publications/2023_01.jpg" alt="Offcut Tales" class="object-cover" />
+            </div>
+            <div class="flex flex-col gap-3 m-6 justify-center basis-3/5">
+              <div class="text-lg lg:text-xl">
+                [1] Werksviertel Primary School
+              </div>
+              <div class="">
+                <span
+                  class="group-hover:bg-gradient-to-r from-[#187caa] via-[#f92f8b] to-[#fcbe37] group-hover:bg-clip-text group-hover:text-transparent duration-300">Dominik
+                  Reisach</span>
+              </div>
+              <div class="">UAS Munich, 2018</div>
+              <div class="">
+                <a class="underline hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300"
+                  target="_blank" href="#">[Bachelor Thesis]</a>
+              </div>
+            </div>
+          </div> -->
             <div
               class="flex flex-row bg-gradient-to-r from-[#187caa] via-[#f92f8b] to-[#fcbe37]"
             >
-              <div class="flex flex-col m-6 justify-center">
-                <div class="text-xs md:text-base">
-                  Equal contributions are indicated using *
+              <div
+                class="flex flex-col m-6 justify-center text-xs lg:text-base"
+              >
+                <div>
+                  Authors marked with a <sup>&#9675;</sup> denote joint first
+                  authorship.
                 </div>
+                <div>
+                  Authors marked with a <sup>&#9651;</sup> indicate joint
+                  supervision.
+                </div>
+                <!-- <div>
+                Papers marked with a <sup>&#9633;</sup> use an alphabetical author listing.
+              </div> -->
               </div>
             </div>
+            <!-- <div>
+            I am thankful for the many inspiring collaborations I've had the opportunity to engage in. A list of
+            co-authors can be found here.
+          </div> -->
           </div>
         </div>
       </div>
@@ -404,7 +462,9 @@ See LICENSE-MIT for details
         <h2 class="hidden">Selected Work</h2>
       </div>
       <!-- selected work grid -->
-      <div class="grid grid-flow-dense grid-cols-1 md:grid-cols-3 lowercase">
+      <div
+        class="grid grid-flow-dense grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lowercase"
+      >
         <div
           class="group cursor-pointer border border-solid border-black aspect-square overflow-hidden"
         >
@@ -415,7 +475,7 @@ See LICENSE-MIT for details
               class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
             <div
-              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b md:group-hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
+              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b lg:group-hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
             >
               Luxurious Waste
             </div>
@@ -431,7 +491,7 @@ See LICENSE-MIT for details
               class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
             <div
-              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b md:group-hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
+              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b lg:group-hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
             >
               Offcut Tales
             </div>
@@ -447,7 +507,7 @@ See LICENSE-MIT for details
               class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
             <div
-              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b md:group-hover:bg-gradient-to-r from-[#fcbe37] to-[#992d9b] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
+              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b lg:group-hover:bg-gradient-to-r from-[#fcbe37] to-[#992d9b] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
             >
               CircÛbi
             </div>
@@ -463,7 +523,7 @@ See LICENSE-MIT for details
               class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
             <div
-              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b md:group-hover:bg-gradient-to-r from-[#992d9b] to-[#187caa] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
+              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b lg:group-hover:bg-gradient-to-r from-[#992d9b] to-[#187caa] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
             >
               Untangled | Entangled
             </div>
@@ -479,7 +539,7 @@ See LICENSE-MIT for details
               class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
             <div
-              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b md:group-hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
+              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b lg:group-hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
             >
               Re:Boat
             </div>
@@ -495,7 +555,7 @@ See LICENSE-MIT for details
               class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
             <div
-              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b md:group-hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
+              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b lg:group-hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
             >
               Sonnenstrasse
             </div>
@@ -511,7 +571,7 @@ See LICENSE-MIT for details
               class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
             <div
-              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b md:group-hover:bg-gradient-to-r from-[#fcbe37] to-[#992d9b] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
+              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b lg:group-hover:bg-gradient-to-r from-[#fcbe37] to-[#992d9b] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
             >
               Appelstrasse
             </div>
@@ -527,7 +587,7 @@ See LICENSE-MIT for details
               class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
             <div
-              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b md:group-hover:bg-gradient-to-r from-[#992d9b] to-[#187caa] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
+              class="absolute inset-0 transition-all ease-in-out group-hover:bg-gradient-to-b lg:group-hover:bg-gradient-to-r from-[#992d9b] to-[#187caa] opacity-75 aspect-square flex justify-center items-center text-transparent hover:text-white text-center text-2xl"
             >
               Photography
             </div>
@@ -539,22 +599,22 @@ See LICENSE-MIT for details
         <div
           class="relative h-screen w-screen z-10 overflow-auto overscroll-contain scrollbar-hide bg-black"
         >
-          <div class="fixed top-6 md:top-12 left-6 md:left-12">
+          <div class="fixed top-6 lg:top-12 left-6 lg:left-12">
             <h2
-              class="lowercase hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="lowercase hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               Offcut Tales
             </h2>
           </div>
-          <div class="fixed top-6 md:top-12 right-6 md:right-12">
+          <div class="fixed top-6 lg:top-12 right-6 lg:right-12">
             <h2
-              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               &empty;
             </h2>
           </div>
           <div
-            class="flex flex-col gap-4 md:gap-6 pt-20 md:pt-36 pb-6 md:pb-6 px-6 md:px-12"
+            class="flex flex-col gap-4 lg:gap-6 pt-20 lg:pt-36 pb-6 lg:pb-6 px-6 lg:px-12"
           >
             <picture>
               <source
@@ -568,7 +628,7 @@ See LICENSE-MIT for details
               />
             </picture>
             <!-- info -->
-            <ul class="text-left md:text-justify">
+            <ul class="text-left lg:text-justify">
               <li class="py-2">
                 Master's Thesis | 2022 | Bauhaus-Universität Weimar, Faculty of
                 Architecture and Urbanism
@@ -759,22 +819,22 @@ See LICENSE-MIT for details
         <div
           class="relative h-screen w-screen z-10 overflow-auto overscroll-contain scrollbar-hide bg-black"
         >
-          <div class="fixed top-6 md:top-12 left-6 md:left-12">
+          <div class="fixed top-6 lg:top-12 left-6 lg:left-12">
             <h2
-              class="lowercase hover:bg-gradient-to-r from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="lowercase hover:bg-gradient-to-r from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               CircÛbi
             </h2>
           </div>
-          <div class="fixed top-6 md:top-12 right-6 md:right-12">
+          <div class="fixed top-6 lg:top-12 right-6 lg:right-12">
             <h2
-              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               &empty;
             </h2>
           </div>
           <div
-            class="flex flex-col gap-4 md:gap-6 pt-20 md:pt-36 pb-6 md:pb-6 px-6 md:px-12"
+            class="flex flex-col gap-4 lg:gap-6 pt-20 lg:pt-36 pb-6 lg:pb-6 px-6 lg:px-12"
           >
             <picture>
               <source
@@ -788,7 +848,7 @@ See LICENSE-MIT for details
               />
             </picture>
             <!-- info -->
-            <ul class="text-left md:text-justify">
+            <ul class="text-left lg:text-justify">
               <li class="py-2">
                 Design–Build Project | 2023 | ETH Zurich, D-ARCH & D-BAUG |
                 <span
@@ -894,22 +954,22 @@ See LICENSE-MIT for details
         <div
           class="relative h-screen w-screen z-10 overflow-auto overscroll-contain scrollbar-hide bg-black"
         >
-          <div class="fixed top-6 md:top-12 left-6 md:left-12">
+          <div class="fixed top-6 lg:top-12 left-6 lg:left-12">
             <h2
-              class="lowercase hover:bg-gradient-to-r from-[#992d9b] to-[#187caa] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="lowercase hover:bg-gradient-to-r from-[#992d9b] to-[#187caa] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               Untangled | Entangled
             </h2>
           </div>
-          <div class="fixed top-6 md:top-12 right-6 md:right-12">
+          <div class="fixed top-6 lg:top-12 right-6 lg:right-12">
             <h2
-              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#992d9b] to-[#187caa] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#992d9b] to-[#187caa] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               &empty;
             </h2>
           </div>
           <div
-            class="flex flex-col gap-4 md:gap-6 pt-20 md:pt-36 pb-6 md:pb-6 px-6 md:px-12"
+            class="flex flex-col gap-4 lg:gap-6 pt-20 lg:pt-36 pb-6 lg:pb-6 px-6 lg:px-12"
           >
             <picture>
               <source
@@ -923,7 +983,7 @@ See LICENSE-MIT for details
               />
             </picture>
             <!-- info -->
-            <ul class="text-left md:text-justify">
+            <ul class="text-left lg:text-justify">
               <li class="py-2">
                 Installation Competition | 2024 | Tallinn Architecture Biennale
                 2024
@@ -953,22 +1013,22 @@ See LICENSE-MIT for details
         <div
           class="relative h-screen w-screen z-10 overflow-auto overscroll-contain scrollbar-hide bg-black"
         >
-          <div class="fixed top-6 md:top-12 left-6 md:left-12">
+          <div class="fixed top-6 lg:top-12 left-6 lg:left-12">
             <h2
-              class="lowercase hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="lowercase hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               Re:Boat
             </h2>
           </div>
-          <div class="fixed top-6 md:top-12 right-6 md:right-12">
+          <div class="fixed top-6 lg:top-12 right-6 lg:right-12">
             <h2
-              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               &empty;
             </h2>
           </div>
           <div
-            class="flex flex-col gap-4 md:gap-6 pt-20 md:pt-36 pb-6 md:pb-6 px-6 md:px-12"
+            class="flex flex-col gap-4 lg:gap-6 pt-20 lg:pt-36 pb-6 lg:pb-6 px-6 lg:px-12"
           >
             <picture>
               <source
@@ -982,7 +1042,7 @@ See LICENSE-MIT for details
               />
             </picture>
             <!-- info -->
-            <ul class="text-left md:text-justify">
+            <ul class="text-left lg:text-justify">
               <li class="py-2">
                 <span
                   class="hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300 underline"
@@ -1036,22 +1096,22 @@ See LICENSE-MIT for details
         <div
           class="relative h-screen w-screen z-10 overflow-auto overscroll-contain scrollbar-hide bg-black"
         >
-          <div class="fixed top-6 md:top-12 left-6 md:left-12">
+          <div class="fixed top-6 lg:top-12 left-6 lg:left-12">
             <h2
-              class="lowercase hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="lowercase hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               Sonnenstrasse
             </h2>
           </div>
-          <div class="fixed top-6 md:top-12 right-6 md:right-12">
+          <div class="fixed top-6 lg:top-12 right-6 lg:right-12">
             <h2
-              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               &empty;
             </h2>
           </div>
           <div
-            class="flex flex-col gap-4 md:gap-6 pt-20 md:pt-36 pb-6 md:pb-6 px-6 md:px-12"
+            class="flex flex-col gap-4 lg:gap-6 pt-20 lg:pt-36 pb-6 lg:pb-6 px-6 lg:px-12"
           >
             <picture>
               <source
@@ -1065,7 +1125,7 @@ See LICENSE-MIT for details
               />
             </picture>
             <!-- info -->
-            <ul class="text-left md:text-justify">
+            <ul class="text-left lg:text-justify">
               <li class="py-2">
                 Competition | Sonnenstrasse, Munich, DE | 1st Prize | 2019 |
                 <span
@@ -1136,22 +1196,22 @@ See LICENSE-MIT for details
         <div
           class="relative h-screen w-screen z-10 overflow-auto overscroll-contain scrollbar-hide bg-black"
         >
-          <div class="fixed top-6 md:top-12 left-6 md:left-12">
+          <div class="fixed top-6 lg:top-12 left-6 lg:left-12">
             <h2
-              class="lowercase hover:bg-gradient-to-r from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="lowercase hover:bg-gradient-to-r from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               Appelstrasse
             </h2>
           </div>
-          <div class="fixed top-6 md:top-12 right-6 md:right-12">
+          <div class="fixed top-6 lg:top-12 right-6 lg:right-12">
             <h2
-              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#fcbe37] to-[#992d9b] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               &empty;
             </h2>
           </div>
           <div
-            class="flex flex-col gap-4 md:gap-6 pt-20 md:pt-36 pb-6 md:pb-6 px-6 md:px-12"
+            class="flex flex-col gap-4 lg:gap-6 pt-20 lg:pt-36 pb-6 lg:pb-6 px-6 lg:px-12"
           >
             <picture>
               <source
@@ -1165,7 +1225,7 @@ See LICENSE-MIT for details
               />
             </picture>
             <!-- info -->
-            <ul class="text-left md:text-justify">
+            <ul class="text-left lg:text-justify">
               <li class="py-2">
                 Competition | Façade Refurbishment Appelstrasse, Hanover, DE |
                 2019 |
@@ -1201,22 +1261,22 @@ See LICENSE-MIT for details
         <div
           class="relative h-screen w-screen z-10 overflow-auto overscroll-contain scrollbar-hide bg-black"
         >
-          <div class="fixed top-6 md:top-12 left-6 md:left-12">
+          <div class="fixed top-6 lg:top-12 left-6 lg:left-12">
             <h2
-              class="lowercase hover:bg-gradient-to-r from-[#992d9b] to-[#187caa] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="lowercase hover:bg-gradient-to-r from-[#992d9b] to-[#187caa] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               Photography
             </h2>
           </div>
-          <div class="fixed top-6 md:top-12 right-6 md:right-12">
+          <div class="fixed top-6 lg:top-12 right-6 lg:right-12">
             <h2
-              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#992d9b] to-[#187caa] hover:bg-clip-text hover:text-transparent duration-300 text-4xl md:text-6xl"
+              class="close-button cursor-pointer hover:bg-gradient-to-l from-[#992d9b] to-[#187caa] hover:bg-clip-text hover:text-transparent duration-300 text-4xl lg:text-6xl"
             >
               &empty;
             </h2>
           </div>
           <div
-            class="flex flex-col gap-4 md:gap-6 pt-20 md:pt-36 pb-6 md:pb-6 px-6 md:px-12"
+            class="flex flex-col gap-4 lg:gap-6 pt-20 lg:pt-36 pb-6 lg:pb-6 px-6 lg:px-12"
           >
             <picture>
               <source
@@ -1237,19 +1297,19 @@ See LICENSE-MIT for details
     <!-- footer -->
     <footer class="w-screen px-12 pt-12 pb-6 text-xs text-center">
       <div
-        class="bg-gradient-to-r from-[#187caa] via-[#f92f8b] to-[#fcbe37] rounded-sm p-3 flex flex-col md:flex-row items-center md:justify-between"
+        class="bg-gradient-to-r from-[#187caa] via-[#f92f8b] to-[#fcbe37] rounded-sm p-3 flex flex-col lg:flex-row items-center lg:justify-between"
       >
-        <span class="pb-3 md:pb-0"
+        <span class="pb-3 lg:pb-0"
           >© 2024 Dominik Reisach. All Rights Reserved.</span
         >
-        <ul class="flex md:flex-row space-x-6">
+        <ul class="flex lg:flex-row space-x-6">
           <li>
             <a
               class="fill-white hover:fill-black duration-500"
               href="https://www.github.com/dominikreisach"
               target="_blank"
               ><svg
-                class="h-4 md:h-5"
+                class="h-4 lg:h-5"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512"
               >
@@ -1264,7 +1324,7 @@ See LICENSE-MIT for details
               href="https://www.linkedin.com/in/dominik-reisach"
               target="_blank"
               ><svg
-                class="h-4 md:h-5"
+                class="h-4 lg:h-5"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
               >
@@ -1279,7 +1339,7 @@ See LICENSE-MIT for details
               href="https://orcid.org/0000-0002-2101-3463"
               target="_blank"
               ><svg
-                class="h-4 md:h-5"
+                class="h-4 lg:h-5"
                 xmlns="http://www.w3.org/2000/svg"
                 height="1em"
                 viewBox="0 0 512 512"
