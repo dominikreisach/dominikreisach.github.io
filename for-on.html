@@ -1,0 +1,418 @@
+<!--
+This file is licensed under the MIT License
+See LICENSE-MIT for details
+-->
+
+<!doctype html>
+<html lang="en" class="scroll-smooth scrollbar-hide font-titillium">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Dominik Reisach: Personal Portfolio Website"
+    />
+    <meta name="author" content="Dominik Reisach" />
+    <meta name="designer" content="Dominik Reisach" />
+    <meta
+      name="keywords"
+      content="architecture, research, design, digital fabrication, computational design, portfolio, personal website"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application for On</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/src/imgs/00_favicon/favicon.ico"
+    />
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <style>
+      /* Dim the p5.js background canvas */
+      canvas {
+        filter: brightness(0.4) contrast(1);
+      }
+    </style>
+  </head>
+
+  <body class="text-white">
+    <!-- hero video section -->
+    <section class="h-screen relative overflow-hidden">
+      <!-- YouTube video embed -->
+      <iframe
+        class="absolute inset-0 w-full h-full p-20"
+        src="https://www.youtube.com/embed/ojf_mrBttiM?si=UMtD4jF9EOg_4z2A"
+        title="Application for On: Senior Specialist – Computational Engineer"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+
+      <!-- scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div class="animate-bounce">
+          <svg
+            class="w-6 h-6 text-[#f92f8b]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <main class="mx-auto px-10 lg:px-60">
+      <!-- team spirit section -->
+      <section class="py-20">
+        <h2
+          class="text-4xl lg:text-6xl text-center mb-16 bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] bg-clip-text text-transparent w-fit mx-auto"
+        >
+          about me
+        </h2>
+
+        <blockquote
+          class="text-2xl lg:text-3xl text-gray-300 leading-relaxed text-pretty"
+        >
+          Computational engineer and designer with a background in architecture
+          and robotics, passionate about turning complex problems into elegant
+          code and fabrication workflows.
+        </blockquote>
+      </section>
+
+      <!-- featured projects section -->
+      <section class="py-20 border-t border-[#f92f8b]">
+        <h2
+          class="text-4xl lg:text-6xl text-center mb-16 bg-gradient-to-r from-[#fcbe37] to-[#992d9b] bg-clip-text text-transparent w-fit mx-auto"
+        >
+          featured projects
+        </h2>
+
+        <!-- project 1: offcut tales -->
+        <div class="mb-20">
+          <h3 class="text-2xl lg:text-4xl mb-6 text-white">offcut tales</h3>
+          <p
+            class="text-lg lg:text-xl text-gray-300 mb-8 text-pretty lg:text-justify"
+          >
+            Offcut Tales is a research project on circularity and automation in
+            timber engineering and design. I developed the Rhino3D/Grasshopper
+            plugin
+            <span
+              class="hover:bg-gradient-to-r from-[#187caa] to-[#f92f8b] hover:bg-clip-text hover:text-transparent duration-300 underline"
+              ><a
+                href="https://github.com/dominikreisach/Spruce-Beetle"
+                target="_blank"
+                >Spruce Beetle</a
+              ></span
+            >
+            in C# to streamline the use of waste wood, from computational design
+            to robotic fabrication. The plugin generates offcut positions,
+            joints, and robotic toolpaths. To validate the workflow, I designed
+            and fabricated a proof-of-concept demonstrator structure with a
+            UR10e robot and custom milling end-effector.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 mb-12">
+            <div class="aspect-square overflow-hidden rounded-sm">
+              <img
+                src="/src/imgs/02_offcut_tales/ot0_dr.avif"
+                alt="Offcut Tales Process"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-sm">
+              <img
+                src="/src/imgs/02_offcut_tales/ot11_dr.avif"
+                alt="Offcut Tales Detail"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-video col-span-2 overflow-hidden rounded-sm">
+              <video class="w-full h-full object-cover" autoplay muted loop>
+                <source
+                  src="/src/imgs/02_offcut_tales/ot13_dr.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div class="aspect-square overflow-hidden rounded-sm">
+              <video class="w-full h-full object-cover" autoplay muted loop>
+                <source
+                  src="/src/imgs/02_offcut_tales/ot6_dr.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div class="aspect-square overflow-hidden rounded-sm">
+              <video class="w-full h-full object-cover" autoplay muted loop>
+                <source
+                  src="/src/imgs/02_offcut_tales/ot7_dr.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div class="aspect-auto col-span-2 overflow-hidden rounded-sm">
+              <video class="w-full h-full object-cover" autoplay muted loop>
+                <source
+                  src="/src/imgs/02_offcut_tales/ot8_dr.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- project 2: compas vp -->
+        <div class="mb-20">
+          <h3 class="text-2xl lg:text-4xl mb-6 text-white">
+            compas voxel pack
+          </h3>
+          <p
+            class="text-lg lg:text-xl text-gray-300 mb-8 text-pretty lg:text-justify"
+          >
+            COMPAS VP is an open-source, object-oriented Python library for
+            packing objects of any shape into containers of any shape. Built on
+            the
+            <span
+              class="hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300 underline"
+              ><a href="https://compas.dev" target="_blank"
+                >COMPAS framework</a
+              ></span
+            >, it offers a modular set of packing strategies that can be
+            flexibly adapted to different design and engineering needs. Object
+            orientation and positioning are highly optimized and defined through
+            field-based methods, enabling customizable and efficient workflows
+            for irregular geometries.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 mb-12">
+            <div class="aspect-video overflow-hidden rounded-sm">
+              <img
+                src="/src/imgs/10_compas_vp/vp0_dr.avif"
+                alt="COMPAS VP logo"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-video overflow-hidden rounded-sm">
+              <video class="w-full h-full object-cover" autoplay muted loop>
+                <source
+                  src="/src/imgs/10_compas_vp/vp2_dr.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div class="aspect-square overflow-hidden rounded-sm">
+              <video class="w-full h-full object-cover" autoplay muted loop>
+                <source
+                  src="/src/imgs/10_compas_vp/vp3_dr.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div class="aspect-square overflow-hidden rounded-sm">
+              <img
+                src="/src/imgs/10_compas_vp/vp4_dr.avif"
+                alt="Packing of Yin-Yang"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-sm">
+              <img
+                src="/src/imgs/10_compas_vp/vp5_dr.avif"
+                alt="Packing of Standford bunny"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-sm">
+              <video class="w-full h-full object-cover" autoplay muted loop>
+                <source
+                  src="/src/imgs/10_compas_vp/vp6_dr.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- project 3: untangled | entangled -->
+        <div class="mb-20">
+          <h3 class="text-2xl lg:text-4xl mb-6 text-white">robotic mosaics</h3>
+          <p
+            class="text-lg lg:text-xl text-gray-300 mb-8 text-pretty lg:text-justify"
+          >
+            Robotic Mosaics explores circular design through the reuse of
+            discarded ceramic tiles. Building on COMPAS VP, I developed a
+            workflow where a robot digitizes tiles with an onboard camera, using
+            a computer vision pipeline for shape and color detection. Mosaic
+            designs can be created in a 2D prototype GUI or extended into 3D
+            through Rhino3D/Grasshopper. Fabrication is achieved with a robotic
+            pick-and-place system: tiles are directly placed for 2D mosaics,
+            while 3D mosaics require flipping with an additional pneumatic
+            gripper.
+          </p>
+
+          <!-- media grid -->
+          <div class="grid grid-cols-2 gap-4 mb-12">
+            <div class="aspect-video overflow-hidden rounded-sm">
+              <img
+                src="/src/imgs/11_robotic_mosaic/rm0_dr.avif"
+                alt="Mosaic Floor"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-video overflow-hidden rounded-sm">
+              <video class="w-full h-full object-cover" autoplay muted loop>
+                <source
+                  src="/src/imgs/11_robotic_mosaic/rm2_dr.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div class="aspect-auto col-span-2 overflow-hidden rounded-sm">
+              <video class="w-full h-full object-cover" autoplay muted loop>
+                <source
+                  src="/src/imgs/11_robotic_mosaic/rm1_dr.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div class="aspect-video overflow-hidden rounded-sm">
+              <video class="w-full h-full object-cover" autoplay muted loop>
+                <source
+                  src="/src/imgs/11_robotic_mosaic/rm3_dr.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div class="aspect-video overflow-hidden rounded-sm">
+              <video class="w-full h-full object-cover" autoplay muted loop>
+                <source
+                  src="/src/imgs/11_robotic_mosaic/rm4_dr.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div class="aspect-square overflow-hidden rounded-sm">
+              <img
+                src="/src/imgs/11_robotic_mosaic/rm5_dr.avif"
+                alt="Mosaic Concrete Panel"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-sm">
+              <img
+                src="/src/imgs/11_robotic_mosaic/rm6_dr.avif"
+                alt="Mosaic Concrete Panel"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- team spirit section -->
+      <section class="py-20 border-t border-[#f92f8b]">
+        <div class="text-center max-w-4xl mx-auto">
+          <h2
+            class="text-4xl lg:text-6xl mb-12 bg-gradient-to-r from-[#992d9b] to-[#187caa] bg-clip-text text-transparent w-fit mx-auto"
+          >
+            team spirit
+          </h2>
+
+          <blockquote
+            class="text-2xl lg:text-3xl text-gray-300 leading-relaxed text-pretty"
+          >
+            Over the past years, I had the privilege to collaborate with
+            engineers, technicians, roboticists, designers, and industry
+            partners, while also supervising student theses and mentoring
+            interns. These experiences taught me to bridge expertise, contribute
+            with a positive spirit, and foster innovation through teamwork.
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- contact section -->
+      <section class="py-20 border-t border-[#f92f8b]">
+        <div class="text-center max-w-4xl mx-auto">
+          <h2
+            class="text-4xl lg:text-6xl mb-12 bg-gradient-to-r from-[#187caa] to-[#f92f8b] bg-clip-text text-transparent w-fit mx-auto"
+          >
+            contact
+          </h2>
+
+          <!-- Contact message -->
+          <div class="mb-12">
+            <p
+              class="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl mx-auto"
+            >
+              Always curious to explore new ideas, technologies, and ways of
+              moving forward together.
+            </p>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-12">
+            <a
+              href="mailto:dominik.reisach@icloud.com"
+              class="text-2xl lg:text-3xl text-gray-300 hover:bg-gradient-to-r from-[#f92f8b] to-[#fcbe37] hover:bg-clip-text hover:text-transparent duration-300"
+            >
+              dominik.reisach@icloud.com
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex justify-center space-x-8 mb-12">
+            <a
+              class="fill-gray-300 hover:fill-[#f92f8b] duration-300 transform hover:scale-110"
+              href="https://www.github.com/dominikreisach"
+              target="_blank"
+              title="GitHub"
+            >
+              <svg
+                class="h-8 lg:h-10"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </a>
+            <a
+              class="fill-gray-300 hover:fill-[#f92f8b] duration-300 transform hover:scale-110"
+              href="https://www.linkedin.com/in/dominik-reisach"
+              target="_blank"
+              title="LinkedIn"
+            >
+              <svg
+                class="h-8 lg:h-10"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Copyright -->
+          <div class="pt-20 text-sm text-gray-400">
+            © 2025 Dominik Reisach. All Rights Reserved.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- js scripts -->
+    <script src="/src/scripts/script.js"></script>
+    <script src="/src/scripts/p5.min.js"></script>
+    <script src="/src/scripts/sketch.js"></script>
+    <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+  </body>
+</html>
